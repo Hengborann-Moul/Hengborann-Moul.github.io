@@ -51,6 +51,11 @@ const PARAMS = {
                     "height": 100
                 },
                 {
+                    "src": "docker-icon.svg",
+                    "width": 100,
+                    "height": 100
+                },
+                {
                     "src": "angular.svg",
                     "width": 100,
                     "height": 100
