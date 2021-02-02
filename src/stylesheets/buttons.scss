@@ -9,52 +9,31 @@ a, a:active, a:hover {
     height: 6rem;
     width: 6rem;
     margin: 0 1.75rem;
-}
 
-.button {
-    transition: color 0.5s linear;
-    height: 6rem;
-    width: 6rem;
-    color: var(--primaryTextColor);
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    text-decoration: none;
-    position: relative;
-    z-index: 1;
-    border-radius: 25%;
-}
+    .button {
+        transition: color 0.5s linear;
+        height: 6rem;
+        width: 6rem;
+        color: var(--primaryTextColor);
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        z-index: 1;
+        border-radius: 25%;
 
-.icon {
-    height: 4.5rem;
-    width: 4.5rem;
-    padding: 1rem;
-}
-
-.icon_title {
-    font-size: 1.5rem;
-}
-
-.button:hover {
-    background-color: var(--shadowColor);
-    box-shadow: 0 0 0.75rem 0.75rem rgba(128, 128, 128, 0.2);
-}
-
-.button:active {
-    -webkit-transform: scale(0.9);
-    transform: scale(0.9);
-}
-
-.button-container .icon_title {
-    display: none;
-}
-
-.button-container:hover .icon_title {
-    display: initial;
-}
-
-.button-container:hover .icon {
-    display: none;
+        .icon {
+            height: 4.5rem;
+            width: 4.5rem;
+            padding: 1rem;
+        }
+        
+        .icon_title {
+            font-size: 1.5rem;
+            display: none;
+        }
+    }
 }
 
 /* Mobile Devices */

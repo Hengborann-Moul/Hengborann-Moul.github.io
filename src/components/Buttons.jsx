@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { GitHub, LinkedIn, Resume, Email } from './../icons'
+import { GitHub, LinkedIn, Email } from './../icons'
 
 const DATA = [
     {
-        href: "https://github.com/Hengborann-Moul",
-        aria: "Visit my GitHub profile to learn more about the projects I have created and contributed to",
-        icon: <GitHub />,
-        label: "Github",
+        href: "mailto:moulhengborann@gmail.com",
+        aria: "Open a pre-addressed email prompt to me that you can fill out",
+        icon: <Email />,
+        label: "Email",
     },
     {
         href: "https://www.linkedin.com/in/moul-hengborann-35a307115/",
@@ -15,16 +15,10 @@ const DATA = [
         label: "LinkedIn",
     },
     {
-        href: "https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i?usp=sharing",
-        aria: "Visit Google Drive to view and download a copy of my resume",
-        icon: <Resume />,
-        label: "Resume",
-    },
-    {
-        href: "mailto:moulhengborann@gmail.com",
-        aria: "Open a pre-addressed email prompt to me that you can fill out",
-        icon: <Email />,
-        label: "Email",
+        href: "https://github.com/Hengborann-Moul",
+        aria: "Visit my GitHub profile to learn more about the projects I have created and contributed to",
+        icon: <GitHub />,
+        label: "Github",
     }
 ];
 
