@@ -1,6 +1,6 @@
 {
-    "homepage": "https://www.adamalston.com/",
-    "name": "v2",
+    "homepage": "https://www.hengborann-moul.github.io/",
+    "name": "portfolio",
     "version": "1.6.0",
     "private": true,
     "dependencies": {
@@ -35,16 +35,16 @@
             "last 1 safari version"
         ]
     },
-    "description": "Personal Website of Adam Alston",
+    "description": "Borann's portfolio",
     "main": "index.js",
     "devDependencies": {},
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/adamalston/v2.git"
+        "url": "git+https://github.com/Hengborann-Moul/me.git"
     },
     "author": "Adam Alston",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/adamalston/v2/issues"
+        "url": "https://github.com/Hengborann-Moul/me/issues"
     }
 }
