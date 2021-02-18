@@ -31,7 +31,7 @@ const PARAMS = {
             },
             "image": [
                 {
-                    "src": "Octocat.png",
+                    "src": "Octocat-min.png",
                     "width": 100,
                     "height": 100
                 },
