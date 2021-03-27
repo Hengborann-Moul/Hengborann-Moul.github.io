@@ -116,7 +116,7 @@ const PARAMS = {
         },
         "move": {
             "enable": true,
-            "speed": 4,
+            "speed": 1,
             "direction": "none",
             "random": false,
             "straight": false,
@@ -174,7 +174,6 @@ const PARAMS = {
         }
     },
     "retina_detect": true
-    // 3m@62^K^88745%
 }
 
 class Particles extends Component {

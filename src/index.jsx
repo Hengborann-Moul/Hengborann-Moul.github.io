@@ -4,7 +4,7 @@ import './index.scss';
 import { Content, Buttons, Footer, Particles } from './components/'
 
 const date = new Date();
-if (date.getHours() >= 18) {
+if (date.getHours() >= 18 || date.getHours() <= 5) {
     document.documentElement.classList.add('dark')
 }
 
