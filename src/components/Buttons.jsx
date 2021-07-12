@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { GitHub, LinkedIn, Email } from './../icons'
+import { GitHub, LinkedIn, Email, Download } from './../icons'
 
 const DATA = [
     {
@@ -19,13 +19,19 @@ const DATA = [
         aria: "Visit my GitHub profile to learn more about the projects I have created and contributed to",
         icon: <GitHub />,
         label: "Github",
+    },
+    {
+        href: "/cv/Moul_Hengborann_CV.pdf",
+        aria: "Download my CV.",
+        icon: <Download />,
+        label: "Download"
     }
 ];
 
 const Button = ({ href, aria, icon, label }) => {
     return (
         <span className='button-container'>
-            <a className='button' href={href} target='_blank' aria-label={aria} rel='noopener noreferrer'>
+            <a className='button' download={label === 'Download' ? href : ''} href={href} target='_blank' aria-label={aria} rel='noopener noreferrer'>
                 <div className='icon'>{icon}</div>
                 <span className='icon_title'>{label}</span>
             </a>
