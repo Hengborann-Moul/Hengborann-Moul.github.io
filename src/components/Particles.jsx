@@ -79,6 +79,16 @@ const PARAMS = {
                     "src": "python.svg",
                     "width": 100,
                     "height": 100
+                },
+                {
+                    "src": "aws-logo.png",
+                    "width": 100,
+                    "height": 50
+                },
+                {
+                    "src": "tailwind-css-logo.png",
+                    "width": 100,
+                    "height": 50
                 }
             ]
         },
