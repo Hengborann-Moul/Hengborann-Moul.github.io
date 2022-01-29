@@ -1,54 +1,26 @@
 {
-    "homepage": "https://www.hengborann-moul.github.io/",
-    "name": "portfolio",
-    "version": "1.6.0",
-    "private": true,
-    "dependencies": {
-        "@testing-library/jest-dom": "^4.2.4",
-        "@testing-library/react": "^9.3.2",
-        "@testing-library/user-event": "^7.1.2",
-        "jest-canvas-mock": "^2.3.0",
-        "node-sass": "^4.14.1",
-        "react": "^16.14.0",
-        "react-dom": "^16.14.0",
-        "react-particles-js": "^3.4.1",
-        "react-scripts": "^3.4.4"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test",
-        "eject": "react-scripts eject",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
-    },
-    "eslintConfig": {
-        "extends": "react-app"
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "description": "Borann's portfolio",
-    "main": "index.js",
-    "devDependencies": {
-        "gh-pages": "^3.2.3"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/Hengborann-Moul/me.git"
-    },
-    "author": "Adam Alston",
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/Hengborann-Moul/me/issues"
-    }
+  "name": "hengborann-moul.github.io",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "next": "12.0.9",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-tsparticles": "^1.39.1",
+    "sass": "^1.49.0"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.13",
+    "@types/react": "17.0.38",
+    "eslint": "8.8.0",
+    "eslint-config-next": "12.0.9",
+    "gh-pages": "^3.2.3",
+    "typescript": "4.5.5"
+  }
 }

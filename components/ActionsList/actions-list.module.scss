@@ -1,0 +1,58 @@
+/* Buttons */
+
+.buttonContainer {
+  display: inline-block;
+  height: 6rem;
+  width: 6rem;
+  margin: 0 1.75rem;
+
+  .button {
+    transition: color 0.5s linear;
+    height: 6rem;
+    width: 6rem;
+    color: var(--primaryTextColor);
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    border-radius: 25%;
+
+    .icon {
+      height: 4.5rem;
+      width: 4.5rem;
+      padding: 1rem;
+    }
+
+    .iconTitle {
+      font-size: 1.5rem;
+      display: none;
+    }
+  }
+}
+
+/* Mobile Devices */
+
+@media only screen and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
+  .buttonContainer {
+    height: 5rem;
+    width: 5rem;
+    margin: 0 0.8rem;
+  }
+
+  .button {
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .icon {
+    height: 4rem;
+    width: 4rem;
+    padding: 0.5rem;
+  }
+
+  .iconTitle {
+    font-size: 1.3rem;
+  }
+}

@@ -1,0 +1,33 @@
+@import "./color.module.scss";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+  font-family: "Source Sans Pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg);
+  color: var(--color);
+  transition: background-color 0.7s;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#__next {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
