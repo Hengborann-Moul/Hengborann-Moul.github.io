@@ -1,13 +1,4 @@
 .profileContainer {
-  width: 250px;
-  height: 250px;
-  position: relative;
-  z-index: 1;
-  border: 5px solid var(--border-color);
-  background-color: var(--color-secondary);
-  border-radius: 50%;
-  margin: auto;
+  @apply h-[250px] w-[250px] relative z-[1] border-[5px] border-solid rounded-full m-auto bg-cover bg-right border-borderColor bg-colorSecondary;
   background-image: url("../../assets/images/profile-min.jpeg");
-  background-size: cover;
-  background-position: right;
 }

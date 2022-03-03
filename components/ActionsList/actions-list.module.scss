@@ -1,33 +1,18 @@
 /* Buttons */
 
 .buttonContainer {
-  display: inline-block;
-  height: 6rem;
-  width: 6rem;
-  margin: 0 1.75rem;
+  @apply inline-block h-24 w-24 my-0 mx-7;
 
   .button {
+    @apply h-24 w-24 table-cell align-middle text-center rounded-[25%] relative z-[1] no-underline text-color;
     transition: color 0.5s linear;
-    height: 6rem;
-    width: 6rem;
-    color: var(--primaryTextColor);
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-    text-decoration: none;
-    position: relative;
-    z-index: 1;
-    border-radius: 25%;
 
     .icon {
-      height: 4.5rem;
-      width: 4.5rem;
-      padding: 1rem;
+      @apply p-4 h-[4.5rem] w-[4.5rem];
     }
 
     .iconTitle {
-      font-size: 1.5rem;
-      display: none;
+      @apply text-2xl hidden;
     }
   }
 }
@@ -36,23 +21,18 @@
 
 @media only screen and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
   .buttonContainer {
-    height: 5rem;
-    width: 5rem;
-    margin: 0 0.8rem;
-  }
+    @apply my-0 mx-[0.8rem] h-20 w-20;
 
-  .button {
-    height: 5rem;
-    width: 5rem;
-  }
+    .button {
+      @apply h-20 w-20;
 
-  .icon {
-    height: 4rem;
-    width: 4rem;
-    padding: 0.5rem;
-  }
-
-  .iconTitle {
-    font-size: 1.3rem;
+      .icon {
+        @apply p-2 h-16 w-16;
+      }
+    
+      .iconTitle {
+        @apply text-xl;
+      }
+    }
   }
 }

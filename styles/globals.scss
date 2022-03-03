@@ -1,33 +1,24 @@
-@import "./color.module.scss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-size: 12px;
-  font-family: "Source Sans Pro", sans-serif;
+  @apply p-0 m-0 bg-bg text-color text-[12px] font-sans;
+  // font-family: "Source Sans Pro", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--bg);
-  color: var(--color);
   transition: background-color 0.7s;
 }
 
 a {
-  color: var(--color-primary);
-  text-decoration: none;
+  @apply text-colorPrimary no-underline;
 }
 
 * {
-  box-sizing: border-box;
+  @apply box-border;
 }
 
 #__next {
-  margin: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  @apply m-0 h-screen flex flex-col items-center justify-center text-center;
 }

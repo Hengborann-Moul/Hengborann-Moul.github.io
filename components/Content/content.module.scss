@@ -2,35 +2,28 @@
 
 .name,
 .title {
-  transition: color 0.5s linear;
-  font-weight: normal;
-  position: relative;
-  z-index: 1;
+  @apply font-normal z-[1] relative transition-colors;
 }
 
 /* Name */
 
 .name {
-  font-size: 6rem;
-  margin: 0 0 3.5rem;
-  color: var(--color);
+  @apply text-8xl m-0 mb-14 text-color;
 }
 
 /* Title */
 
 .title {
-  font-size: 3.5rem;
-  margin: 4rem 0;
-  color: var(--color);
+  @apply mx-0 my-16 text-[3.5rem] text-color;
 }
 
 /* Mobile Devices */
 
 @media only screen and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
   .name {
-    font-size: 4.5rem;
+    @apply text-[4.5rem];
   }
   .title {
-    font-size: 2.5rem;
+    @apply text-[2.5rem];
   }
 }
