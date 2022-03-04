@@ -2,7 +2,7 @@ import React from "react";
 
 import Particles from "react-tsparticles";
 
-import systes from './particle.module.scss';
+import systes from "./particle.module.scss";
 
 const PARAMS = {
   particles: {
@@ -85,6 +85,11 @@ const PARAMS = {
           src: "images/tech-icons/tailwind-css-logo.png",
           width: 100,
           height: 50,
+        },
+        {
+          src: "images/tech-icons/laravel.svg",
+          width: 100,
+          height: 100,
         },
       ],
     },
