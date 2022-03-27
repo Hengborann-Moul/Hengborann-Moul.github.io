@@ -1,6 +1,6 @@
 import React from "react";
 
-import { EmailIcon, LinkedInIcon, GitHubIcon, DownloadIcon } from "../../assets/icons";
+import { EmailIcon, LinkedInIcon, GitHubIcon, DownloadIcon, GitlabIcon } from "../../assets/icons";
 
 import styles from "./actions-list.module.scss";
 
@@ -22,6 +22,12 @@ export function ActionsList(): JSX.Element {
       href: "https://github.com/Hengborann-Moul",
       aria: "Visit my GitHub profile to learn more about the projects I have created and contributed to",
       icon: <GitHubIcon />,
+      label: "Github",
+    },
+    {
+      href: "https://gitlab.com/hengborann.moul",
+      aria: "Visit my Gitlab profile to learn more about the projects I have created and contributed to",
+      icon: <GitlabIcon />,
       label: "Github",
     },
     {
