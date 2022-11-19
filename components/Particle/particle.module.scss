@@ -1,8 +1,0 @@
-/* Particles */
-
-.Particle {
-  transition: background-color 0.5s linear;
-  background-color: var(--bg);
-  background-position: 50% 50%;
-  @apply absolute z-0 bg-no-repeat bg-cover;
-}

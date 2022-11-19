@@ -2,8 +2,6 @@ import React from "react";
 
 import { EmailIcon, LinkedInIcon, GitHubIcon, DownloadIcon, GitlabIcon } from "../../assets/icons";
 
-import styles from "./actions-list.module.scss";
-
 export function ActionsList(): JSX.Element {
   const DATA = [
     {
@@ -40,17 +38,17 @@ export function ActionsList(): JSX.Element {
 
   const Button = ({ href, aria, icon, label }: { href: string; aria: string; icon: React.ReactNode; label: string }) => {
     return (
-      <span className={styles.buttonContainer}>
+      <span className="inline-block my-0 mx-[0.8rem] h-20 w-20 md:h-24 md:w-24 md:my-0 md:mx-7">
         <a
-          className={styles.button}
+          className="h-20 w-20 text-color table-cell align-middle rounded-[25%] relative z-[1] no-underline md:h-24 md:w-24"
           download={label === "Download" ? href : ""}
           href={href}
           target="_blank"
           aria-label={aria}
           rel="noopener noreferrer"
         >
-          <div className={styles.icon}>{icon}</div>
-          <span className={styles.iconTitle}>{label}</span>
+          <div className="p-2 h-16 w-16 md:p-4 md:h-[4.5rem] md:w-[4.5rem]">{icon}</div>
+          <span className="text-xl hidden md:text-2xl">{label}</span>
         </a>
       </span>
     );

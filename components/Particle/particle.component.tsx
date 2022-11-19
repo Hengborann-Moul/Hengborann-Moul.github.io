@@ -2,8 +2,6 @@ import React from "react";
 
 import Particles from "react-tsparticles";
 
-import systes from "./particle.module.scss";
-
 const PARAMS = {
   particles: {
     number: {
@@ -88,6 +86,11 @@ const PARAMS = {
         },
         {
           src: "images/tech-icons/laravel.svg",
+          width: 100,
+          height: 100,
+        },
+        {
+          src: "images/tech-icons/scss-icon.svg",
           width: 100,
           height: 100,
         },
@@ -187,7 +190,7 @@ const PARAMS = {
 
 export function Particle(): JSX.Element {
   return (
-    <div className={systes.Particle}>
+    <div className="absolute z-0 bg-no-repeat bg-cover">
       <Particles width="100vw" height="100vh" options={PARAMS} />
     </div>
   );
