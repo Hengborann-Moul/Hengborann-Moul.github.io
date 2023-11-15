@@ -2,10 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,700&display=swap');
+
 html,
 body {
   @apply p-0 m-0 bg-bg text-color text-[12px] font-sans;
-  // font-family: "Source Sans Pro", sans-serif;
+  font-family: 'IBM Plex Mono', monospace, "Source Sans Pro", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.7s;
