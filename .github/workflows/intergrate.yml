@@ -1,6 +1,8 @@
 name: Build and Deploy
 on:
-  push: [tags]
+  push:
+    tags:
+      - v**
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
