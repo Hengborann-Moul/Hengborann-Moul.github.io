@@ -1,0 +1,20 @@
+.profilePic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  border: 5px solid var(--border-color);
+  border-radius: 50%;
+  background-image: url("../../assets/images/Hengborann.png");
+  background-size: cover;
+  background-position: top left 5px;
+  z-index: 2;
+}
+
+@media screen and (max-width: 425px) {
+  .profilePic {
+    width: 175px;
+    height: 175px;
+  }
+}
