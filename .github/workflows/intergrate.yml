@@ -26,7 +26,6 @@ jobs:
         uses: actions/setup-node@v2
       - run: npm install
       - run: npm run build
-      - run: npm run export
       - run: touch ./out/.nojekyll
         env:
           NODE_AUTH_TOKEN: ${{ secrets.YARN_TOKEN }}
