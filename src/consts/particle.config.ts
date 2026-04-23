@@ -1,139 +1,153 @@
 export const ParticlesConfig = {
+  fullScreen: {
+    enable: true,
+    zIndex: 0,
+  },
+  detectRetina: true,
+  fpsLimit: 60,
+  preload: [
+    { src: "images/tech-icons/ubuntu-icon.svg" },
+    { src: "images/tech-icons/nextjs-icon.svg" },
+    { src: "images/tech-icons/Octocat-min.png" },
+    { src: "images/tech-icons/JavaScript-logo.png" },
+    { src: "images/tech-icons/typescript.svg" },
+    { src: "images/tech-icons/go.svg" },
+    { src: "images/tech-icons/docker-icon.svg" },
+    { src: "images/tech-icons/angular.svg" },
+    { src: "images/tech-icons/redux.svg" },
+    { src: "images/tech-icons/React-icon.svg" },
+    { src: "images/tech-icons/vue.svg" },
+    { src: "images/tech-icons/python.svg" },
+    { src: "images/tech-icons/aws-logo.png" },
+    { src: "images/tech-icons/tailwind-css-logo.png" },
+    { src: "images/tech-icons/laravel.svg" },
+    { src: "images/tech-icons/scss-icon.svg" },
+    { src: "images/tech-icons/neovim.svg" },
+  ],
   particles: {
     number: {
       value: 50,
       density: {
         enable: true,
-        area: 800,
+        width: 800,
+        height: 800,
       },
     },
     color: {
-      value: ["C912ED", "00BFFF", "22DD22", "FFD500", "FF8000", "FF2600"],
+      value: ["#C912ED", "#00BFFF", "#22DD22", "#FFD500", "#FF8000", "#FF2600"],
     },
     shape: {
-      type: "image",
-      stroke: {
-        width: 0,
-        color: "000000",
+      type: ["image"],
+      options: {
+        image: [
+          {
+            src: "images/tech-icons/ubuntu-icon.svg",
+            width: 100,
+            height: 100,
+          },
+          {
+            src: "images/tech-icons/nextjs-icon.svg",
+            width: 100,
+            height: 100,
+          },
+          {
+            src: "images/tech-icons/Octocat-min.png",
+            width: 100,
+            height: 100,
+          },
+          {
+            src: "images/tech-icons/JavaScript-logo.png",
+            width: 100,
+            height: 100,
+          },
+          {
+            src: "images/tech-icons/typescript.svg",
+            width: 100,
+            height: 100,
+          },
+          {
+            src: "images/tech-icons/go.svg",
+            width: 75,
+            height: 100,
+          },
+          {
+            src: "images/tech-icons/docker-icon.svg",
+            width: 100,
+            height: 100,
+          },
+          {
+            src: "images/tech-icons/angular.svg",
+            width: 100,
+            height: 100,
+          },
+          {
+            src: "images/tech-icons/redux.svg",
+            width: 100,
+            height: 100,
+          },
+          {
+            src: "images/tech-icons/React-icon.svg",
+            width: 100,
+            height: 75,
+          },
+          {
+            src: "images/tech-icons/vue.svg",
+            width: 100,
+            height: 80,
+          },
+          {
+            src: "images/tech-icons/python.svg",
+            width: 100,
+            height: 100,
+          },
+          {
+            src: "images/tech-icons/aws-logo.png",
+            width: 300,
+            height: 225,
+          },
+          {
+            src: "images/tech-icons/tailwind-css-logo.png",
+            width: 100,
+            height: 50,
+          },
+          {
+            src: "images/tech-icons/laravel.svg",
+            width: 100,
+            height: 100,
+          },
+          {
+            src: "images/tech-icons/scss-icon.svg",
+            width: 100,
+            height: 100,
+          },
+          {
+            src: "images/tech-icons/neovim.svg",
+            width: 100,
+            height: 100,
+          },
+        ],
       },
-      polygon: {
-        nb_sides: 5,
-      },
-      image: [
-        {
-          src: "images/tech-icons/ubuntu-icon.svg",
-          width: 100,
-          height: 100,
-        },
-        {
-          src: "images/tech-icons/nextjs-icon.svg",
-          width: 100,
-          height: 100,
-        },
-        {
-          src: "images/tech-icons/Octocat-min.png",
-          width: 100,
-          height: 100,
-        },
-        {
-          src: "images/tech-icons/JavaScript-logo.png",
-          width: 100,
-          height: 100,
-        },
-        {
-          src: "images/tech-icons/typescript.svg",
-          width: 100,
-          height: 100,
-        },
-        {
-          src: "images/tech-icons/go.svg",
-          width: 75,
-          height: 100,
-        },
-        {
-          src: "images/tech-icons/docker-icon.svg",
-          width: 100,
-          height: 100,
-        },
-        {
-          src: "images/tech-icons/angular.svg",
-          width: 100,
-          height: 100,
-        },
-        {
-          src: "images/tech-icons/redux.svg",
-          width: 100,
-          height: 100,
-        },
-        {
-          src: "images/tech-icons/React-icon.svg",
-          width: 100,
-          height: 75,
-        },
-        {
-          src: "images/tech-icons/vue.svg",
-          width: 100,
-          height: 80,
-        },
-        {
-          src: "images/tech-icons/python.svg",
-          width: 100,
-          height: 100,
-        },
-        {
-          src: "images/tech-icons/aws-logo.png",
-          width: 300,
-          height: 225,
-        },
-        {
-          src: "images/tech-icons/tailwind-css-logo.png",
-          width: 100,
-          height: 50,
-        },
-        {
-          src: "images/tech-icons/laravel.svg",
-          width: 100,
-          height: 100,
-        },
-        {
-          src: "images/tech-icons/scss-icon.svg",
-          width: 100,
-          height: 100,
-        },
-        {
-          src: "images/tech-icons/neovim.svg",
-          width: 100,
-          height: 100,
-        },
-      ],
     },
     opacity: {
       value: 0.9,
-      random: false,
-      anim: {
+      animation: {
         enable: false,
         speed: 1,
-        opacity_min: 0.5,
         sync: false,
       },
     },
     size: {
-      value: 20,
-      random: {
-        enable: true,
-        minimumValue: 2,
-      },
-      anim: {
+      value: { min: 2, max: 20 },
+      animation: {
         enable: false,
         speed: 30,
-        size_min: 0.1,
         sync: true,
       },
     },
     links: {
       enable: true,
       distance: 75,
-      color: "808080",
+      color: "#808080",
       opacity: 0.9,
       width: 1,
       consent: false,
@@ -147,22 +161,27 @@ export const ParticlesConfig = {
       bounce: false,
       attract: {
         enable: false,
-        rotateX: 600,
-        rotateY: 1200,
+        rotate: {
+          x: 600,
+          y: 1200,
+        },
       },
     },
   },
   interactivity: {
     events: {
-      onhover: {
+      onHover: {
         enable: true,
         mode: "repulse",
       },
-      onclick: {
+      onClick: {
         enable: true,
         mode: "push",
       },
-      resize: true,
+      resize: {
+        delay: 0,
+        enable: true,
+      },
     },
     modes: {
       attract: {
@@ -174,20 +193,19 @@ export const ParticlesConfig = {
         distance: 400,
         size: 40,
         duration: 2,
-        opacity: 8,
-        speed: 3,
+        opacity: 0.8,
       },
       grab: {
         distance: 400,
-        line_linked: {
+        links: {
           opacity: 1,
         },
       },
       push: {
-        particles_nb: 3,
+        quantity: 3,
       },
       remove: {
-        particles_nb: 2,
+        quantity: 2,
       },
       repulse: {
         distance: 100,
@@ -195,6 +213,4 @@ export const ParticlesConfig = {
       },
     },
   },
-  retina_detect: true,
-  fpsLimit: 60,
 };

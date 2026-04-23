@@ -19,6 +19,7 @@
   width: 100%;
   z-index: 2;
   font-family: var(--font-mono);
+  position: relative;
 }
 
 .description h1,
