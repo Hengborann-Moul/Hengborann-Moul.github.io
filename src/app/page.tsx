@@ -1,4 +1,5 @@
 import ProfilePic from '@/components/profile-pic/profile-pic'
+import TypewriterTitle from '@/components/typewriter-title/typewriter-title'
 import styles from './page.module.css'
 
 import Particle from '@/components/particles/particles'
@@ -16,7 +17,7 @@ export default function Home() {
         <Particle />
         <ProfilePic />
         <h1>Hengborann Moul</h1>
-        <h2>Software Engineer</h2>
+        <TypewriterTitle />
       </div>
       {/* TODO: Add Icon to blog page. */}
       {/* <div>Blog Icon</div> */}

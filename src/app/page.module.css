@@ -31,16 +31,9 @@
   font-size: 4rem;
 }
 
-.description h2 {
-  font-size: 2.5rem;
-}
-
 @media screen and (max-width: 767px) {
   .description h1 {
     font-size: 3rem;
-  }
-  .description h2 {
-    font-size: 2rem;
   }
 }
 
@@ -53,8 +46,5 @@
   }
   .description h1 {
     font-size: 1.5rem;
-  }
-  .description h2 {
-    font-size: 1rem;
   }
 }
