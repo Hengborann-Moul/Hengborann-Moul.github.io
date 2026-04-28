@@ -1,0 +1,200 @@
+%% Hengborann MOUL - CV
+%% Compile with: pdflatex HengborannMOUL_CV.tex
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{paracol}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{tikz}
+
+\geometry{top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm}
+
+\definecolor{accentblue}{RGB}{30, 90, 160}
+\definecolor{lightgray}{RGB}{220,220,220}
+\definecolor{skillbar}{RGB}{30, 90, 160}
+
+\hypersetup{colorlinks=true, urlcolor=accentblue, linkcolor=accentblue}
+
+\pagestyle{empty}
+
+% Section styling
+\titleformat{\section}{\large\bfseries\color{accentblue}}{}{0em}{}[\vspace{-4pt}\textcolor{accentblue}{\rule{\linewidth}{0.8pt}}]
+\titlespacing{\section}{0pt}{10pt}{6pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Skill bar command: \skillbar{name}{fraction 0-1}
+\newcommand{\skillbar}[2]{%
+  \noindent #1 \hfill
+  \begin{tikzpicture}[baseline=-0.5ex]
+    \fill[lightgray] (0,0) rectangle (3cm,0.18cm);
+    \fill[skillbar] (0,0) rectangle (#2*3cm,0.18cm);
+  \end{tikzpicture}\\[3pt]
+}
+
+% Job entry
+\newcommand{\jobentry}[4]{%
+  {\textbf{#1}}\\
+  {\itshape #2}\\[2pt]
+  {\small \textbf{Period:} #3 \hfill \textbf{Location:} #4}
+}
+
+\begin{document}
+
+%% ── HEADER ──────────────────────────────────────────────────────────────────
+% \IfFileExists{figures/photo.jpg}{%
+%   \begin{tikzpicture}[remember picture,overlay]
+%     \node[anchor=north east,xshift=-3.5em,yshift=-1em] at (current page.north east)
+%     {\includegraphics[height=4cm]{figures/photo.jpg}};
+%   \end{tikzpicture}%
+% }{}
+
+{\Huge\bfseries Hengborann MOUL}\\[4pt]
+{\large\color{accentblue} Senior Software Engineer, Data Engineering \& Visualization}\\[6pt]
+\small
+\Letter\ \href{mailto:moulhengborann@gmail.com}{moulhengborann@gmail.com}\quad
+\Telefon\ 011836711\quad
+\textsf{GitHub:} \href{https://github.com/hengborann-moul}{@hengborann-moul}\quad
+\\\textsf{LinkedIn:} \href{https://www.linkedin.com/in/hengborann-moul}{Hengborann MOUL}\quad
+\textsf{Location:} Phnom Penh, Cambodia
+
+\vspace{10pt}
+\noindent Highly skilled \textbf{Software Engineer and Data Specialist} offering \textbf{6+ years} of experience in delivering \textbf{robust, scalable solutions} across diverse industries, including \textbf{Telecommunications, EdTech, and SaaS}. Core technical competencies include \textbf{Python, TypeScript, Angular, and React}, underpinned by expertise in \textbf{Machine Learning, system architecture, and modern data workflow design}. Currently pursuing an \textbf{M.Sc. in Data Science} to specialize further in \textbf{AI Software Engineering, Data Engineering, and Machine Learning}.
+
+\vspace{6pt}
+
+%% ── TWO-COLUMN LAYOUT (paracol) ──────────────────────────────────────────────
+\setlength{\columnsep}{1.2em}
+\columnratio{0.62}
+
+\begin{paracol}{2}
+
+  %% ── LEFT COLUMN: EXPERIENCES ─────────────────────────────────────────────────
+  \section{Experiences}
+
+  \jobentry{Data Engineering \& Visualization}{CamGSM Co. Ltd (Cellcard)}{May 2025 -- Jan 2026}{Onsite -- Phnom Penh}
+
+  \vspace{5pt}
+  {\small\textit{\textcolor{accentblue}{\textbf{+} Leadership \& Strategic Impact}}}
+  \begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=2pt]
+    \item Led the \textbf{end-to-end strategy and delivery} of a company-wide \textbf{ETL/ELT data pipeline modernization} initiative, aligning engineering priorities with annual business planning objectives and reducing \textbf{data-to-report latency} by streamlining source-to-BI workflows.
+    \item Served as the \textbf{technical lead} for \textbf{Customer Value Management analytics}, translating business requirements into actionable \textbf{data architectures} and directing campaign design, execution, and post-campaign performance evaluation cycles.
+    \item Defined the \textbf{roadmap} and championed the adoption of the \textbf{Model Context Protocol (MCP)}, enabling the team to build an \textbf{Agentic Chatbot} that delivers accurate, real-time query responses from an internal mini data warehouse.
+  \end{itemize}
+
+  % \vspace{2pt}
+  % {\small\textit{\textcolor{accentblue}{\textbf{+} Team Collaboration \& Cross-Functional Leadership}}}
+  % \begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=2pt]
+  %   \item Collaborated directly with \textbf{senior business stakeholders} to synthesize \textbf{commercial strategy data}, ensuring engineering outputs directly supported \textbf{executive-level annual planning} and \textbf{decision-making}.
+  %   \item Drove adoption of \textbf{Agentic RAG architecture} across the chatbot platform, \textbf{mentoring team members} on knowledge integration techniques and \textbf{context-aware NLP design} to uplift team capability.
+  % \end{itemize}
+
+  \vspace{2pt}
+  {\small\textit{\textcolor{accentblue}{\textbf{+} Technical Delivery}}}
+  \begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=2pt]
+    \item Designed and implemented a \textbf{fully automated ETL/ELT pipeline} that reliably moves data from multiple source systems to \textbf{Power BI}, enabling scalable, self-service BI reporting.
+    \item Applied \textbf{Machine Learning clustering models} to segment the customer base by usage patterns, delivering \textbf{personalized marketing insights} that directly increased product adoption metrics.
+  \end{itemize}
+
+  \vspace{8pt}
+
+  \jobentry{Senior Software Engineer $\rightarrow$ Engineering Lead}{Spiral PBKH Co., Ltd.}{November 2018 -- April 2025 \normalfont\small(6.5 years)}{Onsite -- Phnom Penh}
+  % \jobentry{Senior Software Engineer $\rightarrow$ Engineering Lead}{Spiral PBKH Co., Ltd.}{November 2018 -- April 2025 \normalfont\small(6.5 years)}{Onsite -- Phnom Penh}
+
+  \vspace{5pt}
+  {\small\textit{\textcolor{accentblue}{\textbf{+} Technical Leadership \& Architecture Ownership}}}
+  \begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=2pt]
+    \item Owned the \textbf{architecture and delivery} of a scalable, enterprise-grade \textbf{Data Platform UI}, enabling end-to-end \textbf{data governance}, administration, and monitoring workflows --- coordinating requirements across product, design, and backend teams.
+    \item Led the design and deployment of a \textbf{Kong API Gateway} layer as a centralized middleware solution, setting standards for \textbf{authentication enforcement}, request governance, and \textbf{cross-service scalability} across a distributed microservices ecosystem.
+    \item Established and enforced \textbf{automated CI/CD pipeline standards} across the engineering team, reducing \textbf{release cycle times}, decreasing production incidents, and building team confidence in continuous delivery practices.
+  \end{itemize}
+
+  \vspace{2pt}
+  {\small\textit{\textcolor{accentblue}{\textbf{+} People Leadership \& Mentorship}}}
+  \begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=2pt]
+    \item Drove a \textbf{team-wide migration} from legacy authentication systems to \textbf{modern identity management standards}, leading planning, execution, and stakeholder communication --- significantly improving \textbf{security posture} and developer UX.
+    \item Championed \textbf{engineering best practices} through rigorous \textbf{peer code reviews}, proactively identifying improvements in security, performance, and clean architecture --- fostering a \textbf{culture of quality} and continuous improvement.
+    \item Led \textbf{cross-team collaboration} to deliver a scalable \textbf{HR Management System (HRMS)}, coordinating requirements and delivery across local and \textbf{offshore teams in Japan}.
+  \end{itemize}
+
+  \vspace{2pt}
+  {\small\textit{\textcolor{accentblue}{\textbf{+} Strategic \& Cross-Functional Projects}}}
+  \begin{itemize}[leftmargin=1.2em, itemsep=2pt, topsep=2pt]
+    \item Designed and delivered \textbf{interactive BI dashboards} enabling \textbf{data-driven decision-making} across business stakeholders --- translating complex datasets into clear, \textbf{actionable visual insights}.
+    \item Architected and shipped scalable \textbf{RESTful APIs} within a \textbf{Java/Spring Boot microservice architecture}, implementing custom middleware plugins for \textbf{granular access control} and security hardening.
+    \item Led the \textbf{full-stack engineering} of enterprise \textbf{Angular + TypeScript} frontend platforms, establishing \textbf{modular architecture} and type-safe development standards adopted across multiple products.
+  \end{itemize}
+
+  %% ── RIGHT COLUMN ─────────────────────────────────────────────────────────────
+  \switchcolumn
+
+  %% ── OBJECTIVE ───────────────────────────────────────────────────────────────
+  \section{Objective}
+
+  Seeking to advance my skills and build a strong career with a company that values innovation and creativity, and see the benefit of AI Integration.
+
+  %% ── EDUCATION ───────────────────────────────────────────────────────────────
+  \section{Education}
+
+  \textbf{Institute of Technology of Cambodia}\\
+  Phnom Penh, Cambodia\\
+  M.Sc in Master of Engineering in Data Science
+
+  \vspace{6pt}
+  \textbf{Kirirom Institute of Technology}\\
+  Kampong Speu, Cambodia\\
+  B.Sc in Software Engineering
+
+  %% ── TECHNICAL EXPERTISE ─────────────────────────────────────────────────────
+  \section{Technical Expertise}
+
+  \skillbar{Python}{0.80}
+  \skillbar{Angular}{0.85}
+  \skillbar{React}{0.80}
+  \skillbar{TypeScript}{0.80}
+  \skillbar{JavaScript}{0.80}
+  \skillbar{Machine Learning}{0.70}
+  \skillbar{Plotly}{0.70}
+  \skillbar{Rust}{0.50}
+  \skillbar{Java}{0.50}
+  \skillbar{Spring Boot}{0.65}
+  \skillbar{SQL}{0.78}
+  \skillbar{Power BI}{0.72}
+  \skillbar{Microsoft Fabric}{0.60}
+
+  %% ── SKILLS / EXPOSURE ───────────────────────────────────────────────────────
+  \section{Skills/Exposure}
+
+  \small Python \textbullet\ JavaScript \textbullet\ TypeScript \textbullet\ Angular \textbullet\ React \textbullet\ SCSS \textbullet\ Node.js \textbullet\ Express \textbullet\ PHP \textbullet\ Laravel \textbullet\ Java \textbullet\ Spring \textbullet\ Spring-boot \textbullet\ Spring-web-flow \textbullet\ MongoDB \textbullet\ AWS \textbullet\ Docker \textbullet\ Git \textbullet\ SQL \textbullet\ Keras \textbullet\ TensorFlow \textbullet\ PyTorch \textbullet\ Power BI \textbullet\ R
+
+  %% ── METHODOLOGY ─────────────────────────────────────────────────────────────
+  \section{Methodology/Approach}
+
+  \small Lean \textbullet\ Kanban \textbullet\ Design Thinking \textbullet\ Test-Driven Development \textbullet\ Pair Programming
+
+  %% ── TOOLS ───────────────────────────────────────────────────────────────────
+  \section{Tools}
+
+  \small Git \textbullet\ GitHub \textbullet\ Gitlab \textbullet\ Slack \textbullet\ Postman \textbullet\ Jupyter \textbullet\ Vim \textbullet\ Neovim \textbullet\ Gemini-CLI \textbullet\ Claude-CLI
+
+  %% ── TOOLS ───────────────────────────────────────────────────────────────────
+  \section{Certifications}
+  \textbf{Microsoft Data Visualization}\\
+  Completed the program, focus on builds expertise in Power BI.
+
+  \vspace{8pt}
+  \textbf{IBM Data Engineering Professional Certificate}\\
+  On-going 80\% completed, focus on builds expertise in Data Engineering, Big Data, building Data Pipeline and Data Platform.
+\end{paracol}
+
+\end{document}

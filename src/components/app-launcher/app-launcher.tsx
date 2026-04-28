@@ -2,12 +2,13 @@
 
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { Search, KeyRound, ArrowUp, ArrowDown, CornerDownLeft } from 'lucide-react';
+import { Search, KeyRound, FileText, ArrowUp, ArrowDown, CornerDownLeft } from 'lucide-react';
 import { appsRegistry, AppItem } from './apps-data';
 import styles from './launcher.module.css';
 
 const iconMap: Record<string, React.ElementType> = {
   KeyRound,
+  FileText,
 };
 
 interface AppLauncherProps {
@@ -55,6 +56,19 @@ export default function AppLauncher({ isOpen, onClose }: AppLauncherProps) {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
+
+      // Handle Ctrl+N (next) and Ctrl+P (previous)
+      if (e.ctrlKey && (e.key === 'n' || e.key === 'p')) {
+        e.preventDefault();
+        if (e.key === 'n') {
+          setActiveIndex((prev) =>
+            prev < filteredApps.length - 1 ? prev + 1 : prev
+          );
+        } else {
+          setActiveIndex((prev) => (prev > 0 ? prev - 1 : 0));
+        }
+        return;
+      }
 
       switch (e.key) {
         case 'Escape':
@@ -139,6 +153,11 @@ export default function AppLauncher({ isOpen, onClose }: AppLauncherProps) {
         <div className={styles.footer}>
           <span>
             <ArrowUp size={10} /> <ArrowDown size={10} /> Navigate
+          </span>
+          <span>
+            <kbd className={styles.footerKbd}>Ctrl</kbd> +{' '}
+            <kbd className={styles.footerKbd}>N</kbd>{' '}
+            <kbd className={styles.footerKbd}>P</kbd>
           </span>
           <span>
             <CornerDownLeft size={10} /> Select
