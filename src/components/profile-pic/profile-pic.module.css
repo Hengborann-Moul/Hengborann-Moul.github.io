@@ -1,3 +1,24 @@
+@keyframes dropIn {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(0px);
+    opacity: 0.5;
+  }
+  60% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 .profilePic {
   display: flex;
   justify-content: center;
@@ -10,6 +31,7 @@
   background-size: cover;
   background-position: top left 5px;
   z-index: 2;
+  animation: dropIn 1s ease-out forwards;
 }
 
 @media screen and (max-width: 425px) {

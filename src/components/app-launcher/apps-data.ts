@@ -16,12 +16,12 @@ export const appsRegistry: AppItem[] = [
     icon: 'KeyRound',
     category: 'Security',
   },
-  {
-    id: 'resume',
-    name: 'Resume',
-    description: 'View and download Hengborann Moul\'s CV',
-    route: '/resume',
-    icon: 'FileText',
-    category: 'Profile',
-  },
+  // {
+  //   id: 'resume',
+  //   name: 'Resume',
+  //   description: 'View and download Hengborann Moul\'s CV',
+  //   route: '/resume',
+  //   icon: 'FileText',
+  //   category: 'Profile',
+  // },
 ];
