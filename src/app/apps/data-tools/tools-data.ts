@@ -14,7 +14,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/apache-spark.svg',
     name: 'Apache Spark',
     description:
-      'A unified analytics engine for large-scale data processing. Includes APIs in Scala, Java, Python (known as PySpark), and R (SparkR).',
+      'A unified analytics engine for large-scale data processing with built-in modules for SQL, streaming, machine learning, and graph processing. Includes APIs in Scala, Java, Python (PySpark), and R (SparkR), offering in-memory computing for high performance on batch and real-time workloads.',
     url: 'https://spark.apache.org/',
     category: 'Analytics',
   },
@@ -23,7 +23,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/apache-beam.svg',
     name: 'Apache Beam',
     description:
-      'An open-source implementation of Google DataFlow. Provides capabilities of batch and streaming data processing jobs that run on any execution engine, including Spark, Flink, or its own DirectRunner. Supports multiple APIs in Java, Python, and Go.',
+      'An open-source implementation of Google DataFlow that provides a unified programming model for both batch and streaming data processing jobs. Pipelines can run on any execution engine—including Spark, Flink, Google Cloud Dataflow, or the local DirectRunner—and support multiple SDKs in Java, Python, and Go.',
     url: 'https://beam.apache.org/',
     category: 'Analytics',
   },
@@ -31,7 +31,8 @@ export const toolsData: Tool[] = [
     id: 'apache-flink',
     icon: '/icons/data-tools/apache-flink.svg',
     name: 'Apache Flink',
-    description: 'Stateful computations over data streams.',
+    description:
+      'An open-source, unified stream processing and batch processing framework. Flink provides high-throughput, low-latency streaming with exactly-once semantics, stateful computations, event-time processing, and seamless integration with popular storage systems and connectors.',
     url: 'https://flink.apache.org/',
     category: 'Analytics',
   },
@@ -40,7 +41,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/trino.svg',
     name: 'Trino',
     description:
-      'Distributed SQL Query Engine for Big Data. Formerly known as PrestoSQL.',
+      'A high-performance, distributed SQL query engine designed for fast analytic queries across heterogeneous data sources. Formerly known as PrestoSQL, Trino can query data where it lives—including Hive, Cassandra, relational databases, and proprietary data stores—without requiring data movement.',
     url: 'https://trino.io/',
     category: 'Analytics',
   },
@@ -51,7 +52,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/apache-superset.svg',
     name: 'Apache Superset',
     description:
-      'A modern, enterprise-ready business intelligence web application.',
+      'A modern, enterprise-ready business intelligence web application that enables users to explore and visualize data through an intuitive interface. It supports a wide range of chart types, SQL-based data exploration, real-time analytics, role-based access control, and integrates with most SQL-speaking databases.',
     url: 'https://superset.incubator.apache.org/',
     category: 'Business Intelligence',
   },
@@ -69,7 +70,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/metabase.svg',
     name: 'Metabase',
     description:
-      'An easy way for everyone in your company to ask questions and learn from data.',
+      'An open-source business intelligence and analytics platform that makes it easy for everyone in an organization to ask questions and learn from data. Features include a visual query builder, interactive dashboards, native SQL support, automated reporting, and embedding capabilities.',
     url: 'https://www.metabase.com/',
     category: 'Business Intelligence',
   },
@@ -77,7 +78,8 @@ export const toolsData: Tool[] = [
     id: 'redash',
     icon: '/icons/data-tools/redash.svg',
     name: 'Redash',
-    description: 'All the tools to unlock your data.',
+    description:
+      'An open-source data visualization and collaboration platform designed to help teams make sense of their data. It enables users to query data from multiple sources, visualize results with diverse chart types, build interactive dashboards, and share insights across the organization.',
     url: 'https://redash.io/',
     category: 'Business Intelligence',
   },
@@ -136,7 +138,8 @@ export const toolsData: Tool[] = [
     id: 'apache-calcite',
     icon: '/icons/data-tools/apache-calcite.svg',
     name: 'Apache Calcite',
-    description: 'SQL parser, building blocks for datastores.',
+    description:
+      'A dynamic data management framework and SQL parser that provides the building blocks for building custom database systems and datastores. It includes a cost-based query optimizer, an extensible SQL parser and validator, and adapters for connecting to various backend data sources.',
     url: 'https://calcite.apache.org/',
     category: 'Datastores',
   },
@@ -153,7 +156,8 @@ export const toolsData: Tool[] = [
     id: 'apache-druid',
     icon: '/icons/data-tools/apache-druid.svg',
     name: 'Apache Druid',
-    description: 'A high performance real-time analytics database.',
+    description:
+      'A high-performance, real-time analytics database designed for fast slice-and-dice analytics on large-scale event-driven data. Druid excels at streaming data ingestion, sub-second query latency, high concurrency, and is commonly used for clickstream analytics, APM, and IoT data.',
     url: 'https://druid.apache.org/',
     category: 'Datastores',
   },
@@ -161,7 +165,8 @@ export const toolsData: Tool[] = [
     id: 'apache-hbase',
     icon: '/icons/data-tools/apache-hbase.svg',
     name: 'Apache HBase',
-    description: 'Open Source non-relational distributed database.',
+    description:
+      'An open-source, non-relational, distributed database modeled after Google\'s Bigtable. HBase provides random, real-time read/write access to big data stored in HDFS or other distributed file systems, offering strong consistency, automatic sharding, and linear scalability.',
     url: 'https://hbase.apache.org/',
     category: 'Datastores',
   },
@@ -169,7 +174,8 @@ export const toolsData: Tool[] = [
     id: 'apache-pinot',
     icon: '/icons/data-tools/apache-pinot.svg',
     name: 'Apache Pinot',
-    description: 'A realtime distributed OLAP datastore.',
+    description:
+      'A real-time distributed OLAP datastore designed to deliver scalable, low-latency analytics on large datasets. Pinot supports streaming and batch ingestion, multi-tenant clusters, complex queries with joins, and is optimized for user-facing analytics and time-series data.',
     url: 'https://pinot.apache.org/',
     category: 'Datastores',
   },
@@ -177,7 +183,8 @@ export const toolsData: Tool[] = [
     id: 'clickhouse',
     icon: '/icons/data-tools/clickhouse.svg',
     name: 'ClickHouse',
-    description: 'Open Source distributed column-oriented DBMS.',
+    description:
+      'A fast, open-source, column-oriented DBMS for online analytical processing (OLAP). ClickHouse excels at real-time analytics with vectorized query execution, full SQL support, high compression ratios, and the ability to handle petabytes of data with billions of rows per second throughput.',
     url: 'https://clickhouse.com/',
     category: 'Datastores',
   },
@@ -185,7 +192,8 @@ export const toolsData: Tool[] = [
     id: 'influxdb',
     icon: '/icons/data-tools/influxdb.svg',
     name: 'InfluxDB',
-    description: 'Purpose-Built Open Source Time Series Database.',
+    description:
+      'An open-source time series database purpose-built for high-write and query workloads. InfluxDB is optimized for storing and retrieving time-stamped data such as metrics and events, featuring a custom query language (InfluxQL/Flux), retention policies, and downsampling capabilities.',
     url: 'https://www.influxdata.com/',
     category: 'Datastores',
   },
@@ -203,7 +211,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/postgres.svg',
     name: 'Postgres',
     description:
-      "The World's Most Advanced Open Source Relational Database.",
+      'The world\'s most advanced open-source relational database system. PostgreSQL offers robust SQL compliance, extensibility through custom data types and functions, ACID transactions, full-text search, JSON/JSONB support, spatial data via PostGIS, and strong reliability and data integrity.',
     url: 'https://www.postgresql.org/',
     category: 'Datastores',
   },
@@ -212,7 +220,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/questdb.svg',
     name: 'QuestDB',
     description:
-      'Open Source Time Series Database with a focus on performance and simplicity.',
+      'An open-source, high-performance time series database with a focus on performance and simplicity. QuestDB supports standard SQL with time-series extensions, relational and time-series joins, and achieves high ingestion throughput with low query latency for financial and IoT data.',
     url: 'https://questdb.io/',
     category: 'Datastores',
   },
@@ -222,7 +230,8 @@ export const toolsData: Tool[] = [
     id: 'amundsen',
     icon: '/icons/data-tools/amundsen.svg',
     name: 'Amundsen',
-    description: 'Metadata catalogue.',
+    description:
+      'An open-source data discovery and metadata engine developed by Lyft. Amundsen improves productivity of data analysts, data scientists, and engineers by indexing data resources and powering a page-rank-style search based on usage patterns, table/column descriptions, and data lineage.',
     url: 'https://github.com/lyft/amundsen',
     category: 'Data Governance and Registries',
   },
@@ -231,7 +240,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/apache-atlas.svg',
     name: 'Apache Atlas',
     description:
-      'Data governance and metadata framework for Hadoop.',
+      'An open-source data governance and metadata framework for Hadoop ecosystems. Atlas provides metadata management, data classification, lineage tracking, and policy enforcement capabilities, enabling organizations to catalog, classify, and govern data assets across the enterprise.',
     url: 'https://atlas.apache.org',
     category: 'Data Governance and Registries',
   },
@@ -240,7 +249,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/datahub.svg',
     name: 'DataHub',
     description:
-      'A Generalized Metadata Search & Discovery Tool.',
+      'An open-source metadata platform for the modern data stack, originally built at LinkedIn. DataHub enables data discovery, observability, and governance with automated metadata ingestion, rich data lineage, impact analysis, and programmatic metadata management via APIs.',
     url: 'https://github.com/linkedin/datahub',
     category: 'Data Governance and Registries',
   },
@@ -248,7 +257,8 @@ export const toolsData: Tool[] = [
     id: 'metacat',
     icon: '/icons/data-tools/metacat.svg',
     name: 'Metacat',
-    description: 'Unified metadata exploration API service.',
+    description:
+      'A unified metadata exploration API service developed by Netflix. Metacat federates metadata from various data stores including Hive, RDS, Teradata, Redshift, S3, and Cassandra, providing a single interface for data discovery and reducing the need for users to learn multiple metastores.',
     url: 'https://github.com/Netflix/metacat',
     category: 'Data Governance and Registries',
   },
@@ -274,7 +284,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/openmetadata.svg',
     name: 'OpenMetadata',
     description:
-      'Generalized metadata, search, and lineage tool.',
+      'An open-source unified metadata platform for data discovery, governance, and collaboration. OpenMetadata centralizes metadata from diverse data sources, provides end-to-end data lineage, supports data quality profiling, and enables teams to document and understand their data assets.',
     url: 'https://github.com/open-metadata/OpenMetadata',
     category: 'Data Governance and Registries',
   },
@@ -285,7 +295,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/apache-drill.svg',
     name: 'Apache Drill',
     description:
-      'Schema-free SQL Query Engine for Hadoop, NoSQL and Cloud Storage.',
+      'An open-source, schema-free SQL query engine for big data exploration. Drill enables interactive analysis on nested data in non-relational datastores such as Hadoop, NoSQL databases (MongoDB, HBase), and cloud storage (S3, Azure Blob, Google Cloud Storage) without requiring predefined schemas.',
     url: 'https://drill.apache.org/',
     category: 'Data Virtualization',
   },
@@ -303,7 +313,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/teiid.svg',
     name: 'Teiid',
     description:
-      'A relational abstraction of different information sources.',
+      'An open-source data virtualization system that provides a relational abstraction of various information sources. Teiid allows applications to access and federate data from multiple heterogeneous sources—including databases, web services, and files—through a single, unified JDBC/ODBC interface.',
     url: 'http://teiid.io/',
     category: 'Data Virtualization',
   },
@@ -311,7 +321,8 @@ export const toolsData: Tool[] = [
     id: 'presto',
     icon: '/icons/data-tools/presto.svg',
     name: 'Presto',
-    description: 'Distributed SQL Query Engine for Big Data.',
+    description:
+      'A high-performance, distributed SQL query engine for big data. Originally developed at Facebook, Presto enables querying data where it lives across diverse sources including HDFS, S3, Cassandra, MySQL, and more, supporting both interactive analytics and long-running batch queries.',
     url: 'https://prestodb.io/',
     category: 'Data Virtualization',
   },
@@ -341,7 +352,8 @@ export const toolsData: Tool[] = [
     id: 'apache-avro',
     icon: '/icons/data-tools/apache-avro.svg',
     name: 'Apache Avro',
-    description: 'A data serialization system.',
+    description:
+      'A row-based data serialization system that provides rich data structures and a compact, fast binary format. Avro features dynamic typing, code generation for multiple languages, and a schema registry, making it ideal for Hadoop ecosystems, Kafka messages, and RPC.',
     url: 'https://avro.apache.org/',
     category: 'Formats',
   },
@@ -349,7 +361,8 @@ export const toolsData: Tool[] = [
     id: 'apache-parquet',
     icon: '/icons/data-tools/apache-parquet.svg',
     name: 'Apache Parquet',
-    description: 'A columnar storage format.',
+    description:
+      'An open-source, column-oriented storage format optimized for complex nested data structures. Parquet provides efficient compression and encoding schemes, predicate pushdown, and is designed to bring interoperability between big data processing frameworks like Spark, Hive, and Impala.',
     url: 'https://parquet.apache.org/',
     category: 'Formats',
   },
@@ -357,7 +370,8 @@ export const toolsData: Tool[] = [
     id: 'apache-orc',
     icon: '/icons/data-tools/apache-orc.svg',
     name: 'Apache ORC',
-    description: 'Another columnar storage format.',
+    description:
+      'A high-performance, columnar storage format for Hadoop-based workloads. ORC provides efficient compression, fast query performance through predicate pushdown and block-level column filters, and is optimized for both read-heavy analytics and write operations in Hive and Spark.',
     url: 'https://orc.apache.org/',
     category: 'Formats',
   },
@@ -366,7 +380,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/apache-thrift.svg',
     name: 'Apache Thrift',
     description:
-      'Data type and service interface definitions and code generator.',
+      'A scalable cross-language serialization and RPC framework originally developed at Facebook. Thrift combines a software stack with a code generation engine to build services that work efficiently between multiple programming languages including C++, Java, Python, PHP, and Go.',
     url: 'https://thrift.apache.org/',
     category: 'Formats',
   },
@@ -384,7 +398,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/capn-proto.svg',
     name: "Cap'n Proto",
     description:
-      'A data interchange format and capability-based RPC system.',
+      'An insanely fast data interchange format and capability-based RPC system. Cap\'n Proto features zero-copy deserialization, schema evolution, and a compact binary format, making it significantly faster than Protocol Buffers and JSON for many use cases.',
     url: 'https://capnproto.org/',
     category: 'Formats',
   },
@@ -422,7 +436,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/apache-camel.svg',
     name: 'Apache Camel',
     description:
-      'Easily integrate various systems consuming or producing data.',
+      'An open-source integration framework based on Enterprise Integration Patterns. Camel enables users to define routing and mediation rules in a variety of domain-specific languages, connecting diverse systems and protocols including HTTP, FTP, JMS, and databases with minimal boilerplate.',
     url: 'https://camel.apache.org/',
     category: 'Integration',
   },
@@ -431,7 +445,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/kafka-connect.svg',
     name: 'Kafka Connect',
     description:
-      'Reusable framework to handle data int-and-out of Apache Kafka.',
+      'A scalable and reliable framework for streaming data between Apache Kafka and external systems. Kafka Connect provides a standard way to import data from source systems into Kafka and export Kafka data to sink systems, with fault tolerance, elasticity, and no custom code required.',
     url: 'https://kafka.apache.org/documentation/#connect',
     category: 'Integration',
   },
@@ -439,7 +453,8 @@ export const toolsData: Tool[] = [
     id: 'logstash',
     icon: '/icons/data-tools/logstash.svg',
     name: 'Logstash',
-    description: 'Open Source server-side data processing pipeline.',
+    description:
+      'An open-source server-side data processing pipeline that ingests, transforms, and ships data to your preferred storage backend. Part of the Elastic Stack, Logstash supports a wide variety of input sources, filter plugins for parsing and enriching data, and multiple output destinations.',
     url: 'https://www.elastic.co/logstash',
     category: 'Integration',
   },
@@ -458,7 +473,8 @@ export const toolsData: Tool[] = [
     id: 'apache-activemq',
     icon: '/icons/data-tools/apache-activemq.svg',
     name: 'Apache ActiveMQ',
-    description: 'Flexible & Powerful Multi-Protocol Messaging.',
+    description:
+      'A flexible, powerful, multi-protocol open-source message broker written in Java. ActiveMQ supports JMS 1.1 and 2.0, STOMP, AMQP, and MQTT, providing reliable messaging, clustering, failover, and advanced features like message groups and virtual destinations.',
     url: 'https://activemq.apache.org/',
     category: 'Messaging Infrastructure',
   },
@@ -467,7 +483,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/apache-kafka.svg',
     name: 'Apache Kafka',
     description:
-      'A distributed commit log with messaging capabilities.',
+      'A distributed event streaming platform capable of handling trillions of events per day. Kafka functions as a distributed commit log with publish-subscribe messaging, providing high throughput, low latency, fault tolerance, and horizontal scalability for real-time data pipelines.',
     url: 'https://kafka.apache.org/',
     category: 'Messaging Infrastructure',
   },
@@ -475,7 +491,8 @@ export const toolsData: Tool[] = [
     id: 'apache-pulsar',
     icon: '/icons/data-tools/apache-pulsar.svg',
     name: 'Apache Pulsar',
-    description: 'A distributed pub-sub messaging system.',
+    description:
+      'A cloud-native, distributed messaging and streaming platform. Pulsar features multi-tenant architecture, geo-replication, persistent message storage via Apache BookKeeper, unified messaging and streaming APIs, and tiered storage for infinite retention.',
     url: 'https://pulsar.apache.org/',
     category: 'Messaging Infrastructure',
   },
@@ -502,7 +519,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/nats.svg',
     name: 'NATS',
     description:
-      'A simple, secure and high performance messaging system.',
+      'A lightweight, high-performance messaging system for distributed systems and microservices. NATS supports pub-sub, request-reply, and queueing patterns with features like JetStream for persistence, leaf nodes for edge connectivity, and minimal resource footprint.',
     url: 'https://nats.io/',
     category: 'Messaging Infrastructure',
   },
@@ -510,7 +527,8 @@ export const toolsData: Tool[] = [
     id: 'rabbitmq',
     icon: '/icons/data-tools/rabbitmq.svg',
     name: 'RabbitMQ',
-    description: 'A message broker.',
+    description:
+      'A widely deployed open-source message broker that implements Advanced Message Queuing Protocol (AMQP). RabbitMQ supports multiple messaging protocols, reliable delivery, flexible routing, clustering, federation, and plugins for extended functionality.',
     url: 'https://www.rabbitmq.com/',
     category: 'Messaging Infrastructure',
   },
@@ -528,7 +546,7 @@ export const toolsData: Tool[] = [
     icon: '/icons/data-tools/zeromq.svg',
     name: 'ZeroMQ',
     description:
-      'An open-source universal, high-performance messaging library.',
+      'An open-source universal messaging library and concurrency framework. ZeroMQ provides sockets that carry atomic messages across various transports (in-process, inter-process, TCP, multicast) with patterns like pub-sub, request-reply, and pipeline, without requiring a dedicated broker.',
     url: 'https://zeromq.org/',
     category: 'Messaging Infrastructure',
   },
@@ -558,7 +576,8 @@ export const toolsData: Tool[] = [
     id: 'apache-samza',
     icon: '/icons/data-tools/apache-samza.svg',
     name: 'Apache Samza',
-    description: 'A distributed stream processing framework.',
+    description:
+      'A distributed stream processing framework that uses Apache Kafka for messaging and YARN for cluster resource management. Samza provides stateful processing, exactly-once semantics, high throughput, and low latency for building real-time applications.',
     url: 'http://samza.apache.org/',
     category: 'Stream Processing',
   },
@@ -575,7 +594,8 @@ export const toolsData: Tool[] = [
     id: 'apache-storm',
     icon: '/icons/data-tools/apache-storm.svg',
     name: 'Apache Storm',
-    description: 'A distributed realtime computation system.',
+    description:
+      'A free and open-source distributed real-time computation system. Storm makes it easy to reliably process unbounded streams of data for real-time analytics, online machine learning, continuous computation, and distributed RPC with guaranteed message processing.',
     url: 'http://storm.apache.org/',
     category: 'Stream Processing',
   },
