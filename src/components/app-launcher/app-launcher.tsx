@@ -2,13 +2,14 @@
 
 import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { Search, KeyRound, FileText, ArrowUp, ArrowDown, CornerDownLeft } from 'lucide-react';
+import { Search, KeyRound, FileText, ArrowUp, ArrowDown, CornerDownLeft, Database } from 'lucide-react';
 import { appsRegistry, AppItem } from './apps-data';
 import styles from './launcher.module.css';
 
 const iconMap: Record<string, React.ElementType> = {
   KeyRound,
   FileText,
+  Database,
 };
 
 interface AppLauncherProps {
