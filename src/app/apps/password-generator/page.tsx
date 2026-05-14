@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import {
   Copy,
   RefreshCw,
@@ -74,7 +74,7 @@ export default function PasswordGenerator() {
     numbers: true,
     symbols: true,
   });
-  const [password, setPassword] = useState('');
+  const [password, setPassword] = useState('Password');
   const [copied, setCopied] = useState(false);
   const [history, setHistory] = useState<PasswordHistoryItem[]>([]);
 
@@ -90,10 +90,6 @@ export default function PasswordGenerator() {
       ]);
     }
   }, [length, options]);
-
-  useEffect(() => {
-    regenerate();
-  }, [length, options, regenerate]);
 
   const handleCopy = async () => {
     if (!password) return;
