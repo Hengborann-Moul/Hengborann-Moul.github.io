@@ -1,4 +1,4 @@
 :HL["/_next/static/chunks/02yxb1pyb~3ya.css","style"]
 :HL["/_next/static/media/83afe278b6a6bb3c-s.p.0q-301v4kxxnr.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
 :HL["/_next/static/chunks/18e5itsnm_~va.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"apps","param":null,"prefetchHints":0,"slots":{"children":{"name":"password-generator","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"vr8PecDtvyEg3qYAwOKJ9"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"apps","param":null,"prefetchHints":0,"slots":{"children":{"name":"password-generator","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"7ryIrkn53ktsy47_Rz18S"}
