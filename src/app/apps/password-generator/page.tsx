@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import {
   Copy,
   RefreshCw,
@@ -10,9 +10,13 @@ import {
   ShieldCheck,
   ShieldAlert,
   ShieldX,
+  Trash2,
+  Trash,
 } from 'lucide-react';
 import Link from 'next/link';
 import styles from './page.module.css';
+
+const STORAGE_KEY = 'password-generator-history';
 
 const CHAR_SETS = {
   lowercase: 'abcdefghijklmnopqrstuvwxyz',
@@ -26,6 +30,31 @@ type StrengthLevel = 'weak' | 'fair' | 'good' | 'strong';
 interface PasswordHistoryItem {
   password: string;
   timestamp: number;
+}
+
+interface ConfirmDialogState {
+  open: boolean;
+  title: string;
+  message: string;
+  onConfirm: () => void;
+}
+
+function loadHistory(): PasswordHistoryItem[] {
+  if (typeof window === 'undefined') return [];
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    return stored ? JSON.parse(stored) : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveHistory(history: PasswordHistoryItem[]) {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
+  } catch {
+    // Storage full or unavailable — silently fail
+  }
 }
 
 function calculateStrength(password: string): StrengthLevel {
@@ -77,6 +106,26 @@ export default function PasswordGenerator() {
   const [password, setPassword] = useState('Password');
   const [copied, setCopied] = useState(false);
   const [history, setHistory] = useState<PasswordHistoryItem[]>([]);
+  const [confirm, setConfirm] = useState<ConfirmDialogState>({
+    open: false,
+    title: '',
+    message: '',
+    onConfirm: () => {},
+  });
+  const [mounted, setMounted] = useState(false);
+
+  // Load history from localStorage after mount
+  useEffect(() => {
+    setHistory(loadHistory());
+    setMounted(true);
+  }, []);
+
+  // Persist history to localStorage whenever it changes (after initial mount)
+  useEffect(() => {
+    if (mounted) {
+      saveHistory(history);
+    }
+  }, [history, mounted]);
 
   const strength = calculateStrength(password);
 
@@ -86,7 +135,7 @@ export default function PasswordGenerator() {
     if (newPass) {
       setHistory((prev) => [
         { password: newPass, timestamp: Date.now() },
-        ...prev.slice(0, 4),
+        ...prev,
       ]);
     }
   }, [length, options]);
@@ -106,6 +155,28 @@ export default function PasswordGenerator() {
     setOptions((prev) => ({ ...prev, [key]: !prev[key as keyof typeof prev] }));
   };
 
+  const removeHistoryItem = (timestamp: number) => {
+    setConfirm({
+      open: true,
+      title: 'Delete Password',
+      message: 'Are you sure you want to remove this password from history?',
+      onConfirm: () => {
+        setHistory((prev) => prev.filter((item) => item.timestamp !== timestamp));
+      },
+    });
+  };
+
+  const removeAllHistory = () => {
+    setConfirm({
+      open: true,
+      title: 'Clear All Passwords',
+      message: 'Are you sure you want to remove all passwords from history? This action cannot be undone.',
+      onConfirm: () => {
+        setHistory([]);
+      },
+    });
+  };
+
   const strengthConfig: Record<
     StrengthLevel,
     { label: string; color: string; Icon: React.ElementType }
@@ -121,6 +192,33 @@ export default function PasswordGenerator() {
   return (
     <div className={styles.container}>
       <div className={styles.background} />
+
+      {/* Confirm Dialog */}
+      {confirm.open && (
+        <div className={styles.dialogOverlay} onClick={() => setConfirm((c) => ({ ...c, open: false }))}>
+          <div className={styles.dialog} onClick={(e) => e.stopPropagation()}>
+            <h3 className={styles.dialogTitle}>{confirm.title}</h3>
+            <p className={styles.dialogMessage}>{confirm.message}</p>
+            <div className={styles.dialogActions}>
+              <button
+                className={styles.dialogCancel}
+                onClick={() => setConfirm((c) => ({ ...c, open: false }))}
+              >
+                Cancel
+              </button>
+              <button
+                className={styles.dialogConfirm}
+                onClick={() => {
+                  confirm.onConfirm();
+                  setConfirm((c) => ({ ...c, open: false }));
+                }}
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className={styles.content}>
         <header className={styles.header}>
@@ -237,20 +335,39 @@ export default function PasswordGenerator() {
 
           {history.length > 0 && (
             <div className={styles.historyCard}>
-              <h3 className={styles.historyTitle}>Recent Passwords</h3>
+              <div className={styles.historyHeader}>
+                <h3 className={styles.historyTitle}>Saved Passwords</h3>
+                <button
+                  className={styles.clearAllBtn}
+                  onClick={removeAllHistory}
+                  title="Remove all passwords"
+                >
+                  <Trash size={14} />
+                  Clear All
+                </button>
+              </div>
               <div className={styles.historyList}>
-                {history.map((item, i) => (
-                  <div key={`${item.timestamp}-${i}`} className={styles.historyItem}>
+                {history.map((item) => (
+                  <div key={item.timestamp} className={styles.historyItem}>
                     <code className={styles.historyPassword}>{item.password}</code>
-                    <button
-                      className={styles.historyCopyBtn}
-                      onClick={async () => {
-                        await navigator.clipboard.writeText(item.password);
-                      }}
-                      title="Copy"
-                    >
-                      <Copy size={14} />
-                    </button>
+                    <div className={styles.historyActions}>
+                      <button
+                        className={styles.historyCopyBtn}
+                        onClick={async () => {
+                          await navigator.clipboard.writeText(item.password);
+                        }}
+                        title="Copy"
+                      >
+                        <Copy size={14} />
+                      </button>
+                      <button
+                        className={styles.historyDeleteBtn}
+                        onClick={() => removeHistoryItem(item.timestamp)}
+                        title="Delete"
+                      >
+                        <Trash2 size={14} />
+                      </button>
+                    </div>
                   </div>
                 ))}
               </div>
